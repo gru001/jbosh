@@ -848,7 +848,10 @@ public final class BOSHClient {
         builder.setAttribute(Attributes.XML_LANG, cfg.getLang());
         builder.setAttribute(Attributes.VER,
                 AttrVersion.getSupportedVersion().toString());
-        builder.setAttribute(Attributes.WAIT, "60");
+        //default wait 60
+        //http://xmpp.org/extensions/xep-0124.html point 7
+        builder.setAttribute(Attributes.WAIT, "10");
+        //default hold 1
         builder.setAttribute(Attributes.HOLD, "1");
         builder.setAttribute(Attributes.RID, Long.toString(rid));
         applyRoute(builder);
