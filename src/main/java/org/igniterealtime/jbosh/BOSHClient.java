@@ -850,7 +850,7 @@ public final class BOSHClient {
                 AttrVersion.getSupportedVersion().toString());
         //default wait 60
         //http://xmpp.org/extensions/xep-0124.html point 7
-        builder.setAttribute(Attributes.WAIT, "10");
+        builder.setAttribute(Attributes.WAIT, "5");
         //default hold 1
         builder.setAttribute(Attributes.HOLD, "1");
         builder.setAttribute(Attributes.RID, Long.toString(rid));
