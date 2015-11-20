@@ -8,7 +8,7 @@ apply plugin: 'checkstyle'
 apply from: 'version.gradle'
 
 ext {
-	gitCommit = getGitCommit()
+//	gitCommit = getGitCommit()
 	sonatypeCredentialsAvailable = project.hasProperty('sonatypeUsername') && project.hasProperty('sonatypePassword')
 	isReleaseVersion = !isSnapshot
 	signingRequired = isReleaseVersion
@@ -157,7 +157,7 @@ artifacts {
 	archives testSourcesJar
 }
 
-def getGitCommit() {
+/*def getGitCommit() {
 	def dotGit = new File("$projectDir/.git")
 	if (!dotGit.isDirectory()) return 'non-git build'
 
@@ -166,7 +166,7 @@ def getGitCommit() {
 	def gitCommit = proc.text.trim()
 	assert !gitCommit.isEmpty()
 	gitCommit
-}
+}*/
 
 def getAndroidRuntimeJar() {
 	def androidHome = getAndroidHome()
